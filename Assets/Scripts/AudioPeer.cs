@@ -9,7 +9,15 @@ public class AudioPeer : MonoBehaviour
 {
     AudioSource _audioSource;
     public static float[] _samples = new float[512];
-    public float[] _freqBand = new float[8];
+    float[] _freqBand = new float[8];
+    // if band buffer is higher than freqband, freqband becomes band buffer
+    // makes smoother movement of bars 
+    float[] _bandBuffer = new float[8];
+    float[] _bufferDecrease = new float[8];
+
+    float[] _freqBandHighest = new float[8];
+    public static float[] _audioBand = new float[8];
+    public static float[] _audioBandBuffer = new float[8];
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +30,39 @@ public class AudioPeer : MonoBehaviour
     {
         GetSpectrumAudioSource();
         MakeFrequencyBands();
+        BandBuffer();
+        CreateAudioBands();
     }
-
+ 
     void GetSpectrumAudioSource()
     {
         _audioSource.GetSpectrumData(_samples, 0, FFTWindow.Blackman);
+    }
+
+    void CreateAudioBands()
+    {
+        for (int i = 0; i < 8; i++){
+            if (_freqBand[i] > _freqBandHighest[i]){
+                _freqBandHighest[i] = _freqBand[i];
+            }
+            _audioBand[i] = (_freqBand[i]/_freqBandHighest[i]);
+            _audioBandBuffer[i] = (_bandBuffer[i]/_freqBandHighest[i]);
+        }
+    }
+    void BandBuffer() 
+    {
+        for (int g = 0; g < 8; ++g){
+            if (_freqBand[g] > _bandBuffer[g])
+            {
+                _bandBuffer[g] = _freqBand[g];
+                _bufferDecrease[g] = 0.005f; // Fixed decrease value
+            }
+            if (_freqBand[g] < _bandBuffer[g])
+            {
+                _bufferDecrease [g] = (_bandBuffer[g] - _freqBand[g])/8;
+                _bandBuffer [g] -= _bufferDecrease[g];
+            }
+        }
     }
 
     void MakeFrequencyBands()
@@ -48,7 +84,7 @@ public class AudioPeer : MonoBehaviour
             }
 
             average /= count;
-            _freqBand[i] = average * 10;
+            _freqBand[i] = average * 8;
         }
     }
 }
