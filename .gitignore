@@ -1,0 +1,11 @@
+# Ignore Logs folder
+Logs/
+
+# Ignore Packages folder
+Packages/
+
+# Ignore ProjectSettings folder
+ProjectSettings/
+
+# Ignore UserSettings folder
+UserSettings/
