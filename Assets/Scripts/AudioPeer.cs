@@ -18,10 +18,15 @@ public class AudioPeer : MonoBehaviour
     public static float[] _audioBand = new float[8];
     public static float[] _audioBandBuffer = new float[8];
 
+    public static float[] _Amplitude, _AmplitudeBuffer;
+    float _AmplitudeHighest;
+
     // Start is called before the first frame update
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        _Amplitude = new float[1]; // Allocate memory for _Amplitude array
+        _AmplitudeBuffer = new float[1]; // Allocate memory for _AmplitudeBuffer array
     }
 
     // Update is called once per frame
@@ -31,8 +36,9 @@ public class AudioPeer : MonoBehaviour
         MakeFrequencyBands();
         BandBuffer();
         CreateAudioBands();
+        GetAmplitude();
     }
-    // new 
+    
     void CreateAudioBands()
     {
         for(int i=0; i<8;i++)
@@ -47,6 +53,24 @@ public class AudioPeer : MonoBehaviour
 
         }
     }
+
+    void GetAmplitude()
+    {
+        float _CurrentAmplitude = 0;
+        float _CurrentAmplitudeBuffer = 0;
+
+        for (int i=0; i < 8; i++){
+            _CurrentAmplitude += _audioBand[i];
+            _CurrentAmplitudeBuffer += _audioBandBuffer[i];
+        }
+        if (_CurrentAmplitude > _AmplitudeHighest) {
+            _AmplitudeHighest = _CurrentAmplitude;
+        }
+        _Amplitude[0] = _CurrentAmplitude / _AmplitudeHighest;
+        _AmplitudeBuffer[0] = _CurrentAmplitudeBuffer / _AmplitudeHighest;
+
+    }
+
 
     void GetSpectrumAudioSource()
     {
