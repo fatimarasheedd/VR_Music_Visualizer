@@ -9,10 +9,14 @@ public class AudioPeer : MonoBehaviour
 {
     AudioSource _audioSource;
     public static float[] _samples = new float[512];
-    public static float[] _freqBand = new float[8];
-    public static float[] _bandBuffer = new float[8];
+    float[] _freqBand = new float[8];
+    float[] _bandBuffer = new float[8];
     float[] _bufferDecrease = new float[8];
 
+    // new + everything above used to be public static
+    float[] _freqBandHighest = new float[8];
+    public static float[] _audioBand = new float[8];
+    public static float[] _audioBandBuffer = new float[8];
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +30,22 @@ public class AudioPeer : MonoBehaviour
         GetSpectrumAudioSource();
         MakeFrequencyBands();
         BandBuffer();
+        CreateAudioBands();
+    }
+    // new 
+    void CreateAudioBands()
+    {
+        for(int i=0; i<8;i++)
+        {
+            if (_freqBand[i] > _freqBandHighest[i])
+            {
+                _freqBandHighest[i] = _freqBand[i];
+            }
+            _audioBand[i] = (_freqBand[i] / _freqBandHighest[i]);
+            _audioBandBuffer[i] = (_bandBuffer[i] / _freqBandHighest[i]);
+
+
+        }
     }
 
     void GetSpectrumAudioSource()
