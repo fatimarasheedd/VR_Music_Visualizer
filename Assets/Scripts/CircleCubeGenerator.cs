@@ -14,6 +14,7 @@ public class CircleCubeGenerator : MonoBehaviour
 
     private GameObject[] _sampleCube;
 
+
     void Start()
     {
         _sampleCube = new GameObject[_numCubes];
@@ -30,7 +31,7 @@ public class CircleCubeGenerator : MonoBehaviour
             // Apply the ParamCube material
             MeshRenderer cubeRenderer = _instanceSampleCube.GetComponent<MeshRenderer>();
             cubeRenderer.material = _paramCubeMaterial;
-
+            
             _sampleCube[i] = _instanceSampleCube;
         }
     }

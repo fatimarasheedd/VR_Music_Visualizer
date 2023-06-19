@@ -82,11 +82,11 @@ public class AudioPeer : MonoBehaviour
         for (int g = 0; g < 8; ++g){
             if (_freqBand [g] > _bandBuffer[g]){
                 _bandBuffer [g] = _freqBand [g];
-                _bufferDecrease[g] = 0.0005f;
+                _bufferDecrease[g] = 0.1f;
             }
             if (_freqBand [g] < _bandBuffer[g]){
                 _bandBuffer[g] -= _bufferDecrease[g];
-                _bufferDecrease[g] *= 1.02f;
+                _bufferDecrease[g] *= 1.08f;
             }
 
         }

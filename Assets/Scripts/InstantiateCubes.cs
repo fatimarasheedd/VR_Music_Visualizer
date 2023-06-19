@@ -20,7 +20,7 @@ public class InstantiateCubes : MonoBehaviour
 
             // make it in a circle (360/512)
             this.transform.eulerAngles = new Vector3(0, -0.703125f * i, 0);
-            _instanceSampleCube.transform.position = Vector3.forward * 100;
+            _instanceSampleCube.transform.position = Vector3.forward * 400;
             _sampleCube[i] = _instanceSampleCube;
             
         }
@@ -32,7 +32,7 @@ public class InstantiateCubes : MonoBehaviour
     {
         for (int i=0; i < 512; i++){
             if (_sampleCube != null) {
-                _sampleCube[i].transform.localScale = new Vector3(10,(AudioPeer._samples[i] * _maxScale) * 2,10);
+                _sampleCube[i].transform.localScale = new Vector3(50,(AudioPeer._samples[i] * _maxScale) * 50,50);
             }
         }
     }
