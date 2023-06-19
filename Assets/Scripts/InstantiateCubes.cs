@@ -20,9 +20,11 @@ public class InstantiateCubes : MonoBehaviour
 
             // make it in a circle (360/512)
             this.transform.eulerAngles = new Vector3(0, -0.703125f * i, 0);
-            _instanceSampleCube.transform.position = Vector3.forward * 150;
+            _instanceSampleCube.transform.position = Vector3.forward * 100;
             _sampleCube[i] = _instanceSampleCube;
+            
         }
+
     }
 
     // Update is called once per frame
