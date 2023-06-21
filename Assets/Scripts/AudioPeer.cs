@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // require component of audio
@@ -13,14 +11,13 @@ public class AudioPeer : MonoBehaviour
     float[] _bandBuffer = new float[8];
     float[] _bufferDecrease = new float[8];
 
-    // new + everything above used to be public static
     float[] _freqBandHighest = new float[8];
     public static float[] _audioBand = new float[8];
     public static float[] _audioBandBuffer = new float[8];
 
     public static float[] _Amplitude, _AmplitudeBuffer;
     float _AmplitudeHighest;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -116,5 +113,8 @@ public class AudioPeer : MonoBehaviour
             _freqBand[i] = average * 10;
         }
     }
+
+
+
 }
 
