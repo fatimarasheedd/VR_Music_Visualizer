@@ -44,8 +44,10 @@
      <Compile Include="Assets\Scripts\ValenceSpotlightColour.cs" />
      <Compile Include="Assets\Scripts\ScaleOnAmplitude.cs" />
      <Compile Include="Assets\Scripts\CircleCubeGenerator.cs" />
-     <Compile Include="Assets\Scripts\AudioPeer.cs" />
      <Compile Include="Assets\Scripts\BPMController.cs" />
+     <Compile Include="Assets\Scripts\AudioPeer.cs" />
+     <Compile Include="Assets\Scripts\AudioProcessor.cs" />
+     <Compile Include="Assets\Scripts\BeatDetectionAnalysis.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
