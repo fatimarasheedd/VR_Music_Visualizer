@@ -72,8 +72,8 @@ public class BeatDetectionAnalysis : MonoBehaviour
             if (rb != null)
             {
                  // Adjust the vertical velocity based on the BPM
-            Vector3 velocity = new Vector3(rb.velocity.x, bpm, rb.velocity.z);
-            rb.velocity = velocity;
+                Vector3 velocity = new Vector3(rb.velocity.x, bpm, rb.velocity.z);
+                rb.velocity = velocity;
             }
         }
     }
