@@ -39,16 +39,16 @@
      <Compile Include="Assets\Scripts\ArousalSpotlightColour.cs" />
      <Compile Include="Assets\Scripts\InstantiateSpheres.cs" />
      <Compile Include="Assets\Scripts\InstantiateCubes.cs" />
-     <Compile Include="Assets\Scripts\SoundWaveGenerator.cs" />
      <Compile Include="Assets\Scripts\ParamCube.cs" />
      <Compile Include="Assets\Scripts\LightOnAudio.cs" />
      <Compile Include="Assets\Scripts\ValenceSpotlightColour.cs" />
-     <Compile Include="Assets\Scripts\BeatDetectionAnalysis.cs" />
      <Compile Include="Assets\Scripts\ScaleOnAmplitude.cs" />
      <Compile Include="Assets\Scripts\CircleCubeGenerator.cs" />
-     <Compile Include="Assets\Scripts\AudioProcessor.cs" />
      <Compile Include="Assets\Scripts\BPMController.cs" />
      <Compile Include="Assets\Scripts\AudioPeer.cs" />
+     <Compile Include="Assets\Scripts\AudioProcessor.cs" />
+     <Compile Include="Assets\Scripts\BeatDetectionAnalysis.cs" />
+     <Compile Include="Assets\Scripts\SoundWaveGenerator.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -792,10 +792,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
-      <Project>{f1199e19-6014-e15c-13a2-48d304ba6f50}</Project>
-      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
