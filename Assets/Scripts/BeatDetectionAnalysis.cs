@@ -7,6 +7,12 @@ public class BeatDetectionAnalysis : MonoBehaviour
     private int beatsInInterval = 0; // Number of beats in the current interval
     private float intervalDuration = 15f; // Duration of the interval in seconds
 
+    // Reference to the RoomBoundsCalculator GameObject
+    public GameObject calculateBoundary;
+
+    // Reference to the calculated room bounds
+    private Bounds roomBounds;
+
     void Start()
     {
         //Select the instance of AudioProcessor and pass a reference
@@ -14,6 +20,10 @@ public class BeatDetectionAnalysis : MonoBehaviour
         AudioProcessor processor = FindObjectOfType<AudioProcessor>();
         processor.onBeat.AddListener(onOnbeatDetected);
         processor.onSpectrum.AddListener(onSpectrum);
+
+        // Get the room bounds from the RoomBoundsCalculator script
+        RoomBoundsCalculator boundsCalculator = calculateBoundary.GetComponent<RoomBoundsCalculator>();
+        roomBounds = boundsCalculator.CalculateRoomBounds();
     }
 
     //this event will be called every time a beat is detected.
@@ -57,6 +67,7 @@ public class BeatDetectionAnalysis : MonoBehaviour
 
             // Set the velocity of child spheres based on BPM
             SetChildSpheresVelocity(bpm);
+            ConstrainChildSpheresToBounds();
         }
     }
 
@@ -74,6 +85,23 @@ public class BeatDetectionAnalysis : MonoBehaviour
                  // Adjust the vertical velocity based on the BPM
                 Vector3 velocity = new Vector3(rb.velocity.x, bpm, rb.velocity.z);
                 rb.velocity = velocity;
+            }
+        }
+    }
+
+    // confinement and redirection logic
+    void ConstrainChildSpheresToBounds()
+    {
+        ScaleOnAmplitude[] childSpheres = GetComponentsInChildren<ScaleOnAmplitude>();
+
+        foreach (ScaleOnAmplitude sphere in childSpheres)
+        {
+            Rigidbody rb = sphere.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                // Constrain the sphere within the room bounds
+                Vector3 newPosition = roomBounds.ClosestPoint(rb.position);
+                rb.position = newPosition;
             }
         }
     }
