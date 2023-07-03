@@ -5,7 +5,7 @@ using System.Linq;
 
 public class SoundWaveGenerator : MonoBehaviour
 {
-    AudioSource _audioSource;
+    AudioPeer _audioPeer;
     const int SpectrumSize = 8192;
     readonly float[] _spectrum = new float[SpectrumSize];
     public LineRenderer _topLine;
@@ -13,12 +13,12 @@ public class SoundWaveGenerator : MonoBehaviour
 
     public void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
+        _audioPeer = FindObjectOfType<AudioPeer>();
     }
 
     public void Update()
     {
-        _audioSource.GetSpectrumData(_spectrum, 0, FFTWindow.BlackmanHarris);
+        _audioPeer.GetComponent<AudioSource>().GetSpectrumData(_spectrum, 0, FFTWindow.BlackmanHarris);
 
         var bandSize = 1.1f;
         var crossover = bandSize;

@@ -33,7 +33,6 @@ public class BeatDetectionAnalysis : MonoBehaviour
     {
         beatCount++;
         beatsInInterval++;
-        Debug.Log("Beat count: " + beatCount);
     }
 
     //This event will be called every frame while music is playing
