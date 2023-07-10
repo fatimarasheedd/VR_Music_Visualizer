@@ -36,10 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
      <Compile Include="Assets\Scripts\ArousalSpotlightColour.cs" />
+     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
+     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
      <Compile Include="Assets\Scripts\InstantiateCubes.cs" />
      <Compile Include="Assets\Scripts\SoundWaveGenerator.cs" />
+     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
      <Compile Include="Assets\Scripts\CircleCubeGenerator.cs" />
+     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
+     <Compile Include="Assets\Scripts\FacingCamera.cs" />
      <Compile Include="Assets\Scripts\RoomBoundsCalculator.cs" />
      <Compile Include="Assets\Scripts\ParamCube.cs" />
      <Compile Include="Assets\Scripts\LightOnAudio.cs" />
@@ -49,12 +55,28 @@
      <Compile Include="Assets\Scripts\AudioProcessor.cs" />
      <Compile Include="Assets\Scripts\CSVReader.cs" />
      <Compile Include="Assets\Scripts\AudioPeer.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders\3DText.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

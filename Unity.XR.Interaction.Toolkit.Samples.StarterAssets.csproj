@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Samples\XR Interaction Toolkit\2.2.0\Starter Assets\Scripts\ActionBasedControllerManager.cs" />
      <Compile Include="Assets\Samples\XR Interaction Toolkit\2.2.0\Starter Assets\Scripts\DynamicMoveProvider.cs" />
+     <Compile Include="Assets\Samples\XR Interaction Toolkit\2.2.0\Starter Assets\Scripts\ActionBasedControllerManager.cs" />
      <None Include="Assets\Samples\XR Interaction Toolkit\2.2.0\Starter Assets\Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
