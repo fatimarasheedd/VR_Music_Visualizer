@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\FacingCamera.cs" />
      <Compile Include="Assets\Scripts\RoomBoundsCalculator.cs" />
      <Compile Include="Assets\Scripts\ParamCube.cs" />
+     <Compile Include="Assets\Oculus Hands\Scripts\AnimateHandOnInput.cs" />
      <Compile Include="Assets\Scripts\LightOnAudio.cs" />
      <Compile Include="Assets\Scripts\ValenceSpotlightColour.cs" />
      <Compile Include="Assets\Scripts\BeatDetectionAnalysis.cs" />

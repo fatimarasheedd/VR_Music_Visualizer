@@ -5,23 +5,37 @@ using UnityEngine.XR;
 
 public class HandPresence : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        List<InputDevice> devices = new List<InputDevice>();
-        InputDevices.GetDevices(devices);
-        UnityEngine.Debug.Log("we made it here up here");
+    public InputDeviceCharacteristics controllerCharacteristics;
+    public InputDevice targetDevice;
 
-        foreach (var item in devices){
+    public float startDelay = 3.0f; // The delay time in seconds
+
+    // Start is called before the first frame update
+    IEnumerator Start()
+    {
+        // Wait for the specified delay time
+        yield return new WaitForSeconds(startDelay);
+
+        List<InputDevice> devices = new List<InputDevice>();
+
+        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
+
+        foreach (var item in devices)
+        {
             UnityEngine.Debug.Log(item.name + item.characteristics);
-            UnityEngine.Debug.Log("we made it here");
         }
-        
+
+        if (devices.Count > 0)
+        {
+            targetDevice = devices[0];
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue) && primaryButtonValue){
+            UnityEngine.Debug.Log("Pressing primary button");
+        }
     }
 }
