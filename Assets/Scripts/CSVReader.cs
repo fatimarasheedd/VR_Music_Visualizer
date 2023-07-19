@@ -5,9 +5,9 @@ using System;
 
 public class CSVReader : MonoBehaviour
 {
-
     public TextAsset textAssetData;
     [System.Serializable]
+
 
     public class TrackInfo
     {
