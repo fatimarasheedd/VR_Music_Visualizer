@@ -4,14 +4,19 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using System.IO;
+using TMPro;
+using UnityEngine.EventSystems;
+
 
 public class CSVReader : MonoBehaviour
 {
     public TextAsset textAssetData;
     public GameObject trackPanelPrefab;
+    public static string selectedSong; 
+    public static int selectedValence; 
+    public static int selectedArousal;
 
     [System.Serializable]
-
 
     public class TrackInfo
     {
@@ -67,15 +72,48 @@ public class CSVReader : MonoBehaviour
 
                 GameObject newTrack = Instantiate(trackPanelPrefab, transform.position, transform.rotation) as GameObject;
                 newTrack.transform.SetParent(GameObject.FindGameObjectWithTag("Lib").transform, false);
+                
+                TrackPrefabController trackPrefabController = newTrack.GetComponent<TrackPrefabController>();
 
+                // Check if the component exists (it should if you attached the TrackPrefabController script to the prefab)
+                if (trackPrefabController != null)
+                {
+                    // Initialize the trackPrefabController with the track name
+                    trackPrefabController.Initialize(myTrackList.track[i].Track);
+                }
+                else
+                {
+                    Debug.LogError("TrackPrefabController component not found on the prefab.");
+                }
+                
                 Image coverImage = newTrack.transform.Find("Cover")?.GetComponent<Image>();
-                UnityEngine.Debug.Log(coverImage);
-                UnityEngine.Debug.Log(loadedSprite);
-                UnityEngine.Debug.Log(imagePath);
 
                 if (coverImage != null && loadedSprite != null)
                 {
                     coverImage.sprite = loadedSprite;
+
+                    // add album name and artist name
+                    TextMeshProUGUI songNameText = newTrack.transform.Find("SongName")?.GetComponent<TextMeshProUGUI>();
+                    TextMeshProUGUI artistText = newTrack.transform.Find("Artist")?.GetComponent<TextMeshProUGUI>();
+
+                    if (songNameText != null)
+                    {
+                        songNameText.text = myTrackList.track[i].Track;
+                    }
+                    else
+                    {
+                        Debug.LogError("SongName TextMeshProUGUI component not found on the prefab.");
+                    }
+
+                    if (artistText != null)
+                    {
+                        artistText.text = myTrackList.track[i].Artist;
+                    }
+                    else
+                    {
+                        Debug.LogError("Artist TextMeshProUGUI component not found on the prefab.");
+                    }
+                    
                 }
             
             }
@@ -83,7 +121,6 @@ public class CSVReader : MonoBehaviour
         }
     }
 
-    // Helper method to load a sprite from a file path
     private Sprite LoadSpriteFromFile(string path)
     {
         if (File.Exists(path))
