@@ -13,8 +13,8 @@ public class CSVReader : MonoBehaviour
     public TextAsset textAssetData;
     public GameObject trackPanelPrefab;
     public static string selectedSong; 
-    public static int selectedValence; 
-    public static int selectedArousal;
+    public static float selectedValence; 
+    public static float selectedArousal;
 
     [System.Serializable]
 
@@ -79,13 +79,13 @@ public class CSVReader : MonoBehaviour
                 if (trackPrefabController != null)
                 {
                     // Initialize the trackPrefabController with the track name
-                    trackPrefabController.Initialize(myTrackList.track[i].Track);
+                    trackPrefabController.Initialize(myTrackList.track[i].Track, myTrackList.track[i].Valence, myTrackList.track[i].Energy);
                 }
                 else
                 {
                     Debug.LogError("TrackPrefabController component not found on the prefab.");
                 }
-                
+
                 Image coverImage = newTrack.transform.Find("Cover")?.GetComponent<Image>();
 
                 if (coverImage != null && loadedSprite != null)

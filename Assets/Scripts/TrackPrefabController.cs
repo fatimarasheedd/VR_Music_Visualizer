@@ -3,17 +3,31 @@ using UnityEngine.UI;
 
 public class TrackPrefabController : MonoBehaviour
 {
+    // Store the selected track details in static variables
+    public static string selectedSong;
+    public static float selectedValence;
+    public static float selectedArousal;
+
     private string trackName;
+    private float valence;
+    private float arousal;
 
-
-    public void Initialize(string trackName)
+    public void Initialize(string trackName, float valence, float arousal)
     {
         this.trackName = trackName;
+        this.valence = valence;
+        this.arousal = arousal;
     }
 
     public void OnTrackButtonClick()
     {
-        Debug.Log(trackName + " button clicked");
+        selectedSong = trackName;
+        selectedValence = valence;
+        selectedArousal = arousal;
+
+        Debug.Log("Selected Song: " + selectedSong);
+        Debug.Log("Selected Valence: " + selectedValence);
+        Debug.Log("Selected Arousal: " + selectedArousal);
 
         GameObject libraryPanel = GameObject.Find("Library Panel");
 
@@ -21,21 +35,18 @@ public class TrackPrefabController : MonoBehaviour
         if (libraryPanel != null)
         {
             libraryPanel.SetActive(false);
-            Debug.Log("Lib panel found");
         }
         else
         {
             Debug.LogError("LibraryPanel GameObject not found.");
         }
 
-        GameObject selectPanel = GameObject.Find("Select Panel");
+        GameObject selectPanel = GameObject.Find("Select Start Panel");
 
         // Enable the Select panel
         if (selectPanel != null)
         {
             selectPanel.SetActive(true);
-            Debug.Log("Select panel found");
-
         }
         else
         {
