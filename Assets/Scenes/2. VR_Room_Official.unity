@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18035275, g: 0.2257897, b: 0.30702734, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -400,6 +400,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
       value: AmpSphere
@@ -638,6 +646,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
       value: AmpSphere
@@ -873,6 +889,14 @@ PrefabInstance:
     - target: {fileID: 4196488589369210320, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -1272,7 +1296,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TrackingType: 0
   m_UpdateType: 0
-  m_IgnoreTrackingState: 0
   m_PositionInput:
     m_UseReference: 0
     m_Action:
@@ -1327,18 +1350,6 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Rotation
         m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_TrackingStateInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Tracking State Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d51415c8-b197-4fca-8d01-059b8191cd0a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PositionAction:
@@ -1494,6 +1505,14 @@ PrefabInstance:
     - target: {fileID: 4196488589369210320, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -1986,7 +2005,6 @@ MonoBehaviour:
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
-  m_SnapEndpointIfAvailable: 1
 --- !u!120 &710552090
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2297,7 +2315,6 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -2754,6 +2771,14 @@ PrefabInstance:
     - target: {fileID: 4196488589369210320, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -3227,6 +3252,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
       value: AmpSphere
@@ -3400,6 +3433,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
       value: AmpSphere
@@ -3556,6 +3597,14 @@ PrefabInstance:
     - target: {fileID: 4196488589369210320, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -3809,6 +3858,14 @@ PrefabInstance:
     - target: {fileID: 4196488589369210320, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -4129,6 +4186,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1519634122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519634124}
+  - component: {fileID: 1519634123}
+  m_Layer: 0
+  m_Name: SetupVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1519634123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519634122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9faa1d0658110429ce0955bd949732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1519634124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519634122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.281001, y: 41.339664, z: 145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1529790867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,7 +4413,6 @@ MonoBehaviour:
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
-  m_SnapEndpointIfAvailable: 1
 --- !u!120 &1529790871
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -4623,7 +4723,6 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -4993,6 +5092,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _maxScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
+      propertyPath: _startScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
       value: AmpSphere
@@ -5228,54 +5335,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8445288951961971949, guid: a0b03bf6aead9440a857d89e921c2a58, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a0b03bf6aead9440a857d89e921c2a58, type: 3}
---- !u!1 &1921101192
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1921101194}
-  - component: {fileID: 1921101193}
-  m_Layer: 0
-  m_Name: ReadCSV
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1921101193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921101192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cdb55818f8d24e76a89f550ebfe87ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textAssetData: {fileID: 4900000, guid: df5ac2044f16946baa2655fd4cf707fa, type: 3}
-  trackPanelPrefab: {fileID: 0}
-  myTrackList:
-    track: []
---- !u!4 &1921101194
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921101192}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0762782, y: 2.4769356, z: -1.0648124}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1929274293
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,7 +5376,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5fc6aac6ef0e94cef8c75eac03baef78, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

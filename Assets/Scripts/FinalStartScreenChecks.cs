@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class FinalStartScreenChecks : MonoBehaviour
 {
-
-    private ColourQuizManager colourQuizManager;
-
     public string lowValenceColor;
     public string lowMediumValenceColor;
     public string mediumHighValenceColor;
@@ -15,43 +12,51 @@ public class FinalStartScreenChecks : MonoBehaviour
     public string mediumHighArousalColor;
     public string highArousalColor;
 
+    public Material LowValence;
+    public Material LowMedValence;
+    public Material MedHighValence;
+    public Material HighValence;
 
-    // Start is called before the first frame update
-    void Start()
+    public Material LowArousal;
+    public Material LowMedArousal;
+    public Material MedHighArousal;
+    public Material HighArousal;
+
+    public void OnQuizCompleted()
     {
-        // Find the ColourQuizManager component attached to the "Select Start Panel" game object.
-        colourQuizManager = GameObject.Find("Select Start Panel").GetComponent<ColourQuizManager>();
-
-        if (colourQuizManager == null)
-        {
-            Debug.LogError("ColourQuizManager not found in the scene or attached to the 'Select Start Panel' game object.");
-        }
+        // Quiz completed
+        Debug.Log("Quiz completed");
+        lowValenceColor = ColorUtility.ToHtmlStringRGB(LowValence.color);
+        lowMediumValenceColor = ColorUtility.ToHtmlStringRGB(LowMedValence.color);
+        Debug.Log("example mat colours");
+        Debug.Log(lowValenceColor);
+        Debug.Log(lowMediumValenceColor);
     }
 
-    private void OnEnable()
-    {
-        // Check if the quiz is completed or not
-        if (colourQuizManager != null && colourQuizManager.IsQuizComplete())
-        {
-            // Quiz completed
-            Debug.Log("Quiz completed");
-        }
-        else
-        {
-            Debug.Log("Quiz completed");
-            // Set the hex colors for different valence and arousal levels
-            lowValenceColor = "#0D026E"; 
-            lowMediumValenceColor = "#9DCAEB";
-            mediumHighValenceColor = "#FFFF00"; 
-            highValenceColor = "#FF00FF"; 
+    public void OnQuizNotCompleted(){
 
-            lowArousalColor = "#ADD8E6"; 
-            lowMediumArousalColor = "#F6C6BD"; 
-            mediumHighArousalColor = "#FCDA3F"; 
-            highArousalColor = "#F22400";
+        Debug.Log("Quiz not completed");
 
-            Debug.Log("Quiz NOT completed");
+        // Set the hex colors for different valence and arousal levels
+        lowValenceColor = "0D026E"; 
+        lowMediumValenceColor = "9DCAEB";
+        mediumHighValenceColor = "FFFF00"; 
+        highValenceColor = "FF00FF"; 
 
-        }
+        lowArousalColor = "ADD8E6"; 
+        lowMediumArousalColor = "F6C6BD"; 
+        mediumHighArousalColor = "FCDA3F"; 
+        highArousalColor = "F22400";
+
+        Debug.Log("example preset colours");
+        Debug.Log(lowValenceColor);
+        Debug.Log(lowMediumValenceColor);
+
     }
+    public void StartGame(){
+        Debug.Log("Game starting!");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official");
+
+    }
+    
 }
