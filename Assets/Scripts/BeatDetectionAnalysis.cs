@@ -24,6 +24,7 @@ public class BeatDetectionAnalysis : MonoBehaviour
         // Get the room bounds from the RoomBoundsCalculator script
         RoomBoundsCalculator boundsCalculator = calculateBoundary.GetComponent<RoomBoundsCalculator>();
         roomBounds = boundsCalculator.CalculateRoomBounds();
+        ConstrainChildSpheresToBounds();
     }
 
     //this event will be called every time a beat is detected.
