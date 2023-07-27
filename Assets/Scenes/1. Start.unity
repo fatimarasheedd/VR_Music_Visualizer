@@ -75680,14 +75680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0185c6c1e083e48cda06524a691cc110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowValenceColor: 
-  lowMediumValenceColor: 
-  mediumHighValenceColor: 
-  highValenceColor: 
-  lowArousalColor: 
-  lowMediumArousalColor: 
-  mediumHighArousalColor: 
-  highArousalColor: 
   LowValence: {fileID: 2100000, guid: 25e5c5ea0a49b49d8b5475fba80e108f, type: 2}
   LowMedValence: {fileID: 2100000, guid: 1a679541b94f244f3a8f1fe2461df241, type: 2}
   MedHighValence: {fileID: 2100000, guid: 4ecf848e90509401abe0f26a4685d11c, type: 2}

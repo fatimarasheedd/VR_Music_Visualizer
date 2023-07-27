@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class FinalStartScreenChecks : MonoBehaviour
 {
-    public string lowValenceColor;
-    public string lowMediumValenceColor;
-    public string mediumHighValenceColor;
-    public string highValenceColor;
+    public static string lowValenceColor;
+    public static string lowMediumValenceColor;
+    public static string mediumHighValenceColor;
+    public static string highValenceColor;
 
-    public string lowArousalColor;
-    public string lowMediumArousalColor;
-    public string mediumHighArousalColor;
-    public string highArousalColor;
+    public static string lowArousalColor;
+    public static string lowMediumArousalColor;
+    public static string mediumHighArousalColor;
+    public static string highArousalColor;
 
     public Material LowValence;
     public Material LowMedValence;
@@ -25,12 +25,16 @@ public class FinalStartScreenChecks : MonoBehaviour
     public void OnQuizCompleted()
     {
         // Quiz completed
-        Debug.Log("Quiz completed");
         lowValenceColor = ColorUtility.ToHtmlStringRGB(LowValence.color);
         lowMediumValenceColor = ColorUtility.ToHtmlStringRGB(LowMedValence.color);
-        Debug.Log("example mat colours");
-        Debug.Log(lowValenceColor);
-        Debug.Log(lowMediumValenceColor);
+        mediumHighValenceColor = ColorUtility.ToHtmlStringRGB(MedHighValence.color);
+        highValenceColor = ColorUtility.ToHtmlStringRGB(HighValence.color);
+
+        lowArousalColor = ColorUtility.ToHtmlStringRGB(LowArousal.color);
+        lowMediumArousalColor = ColorUtility.ToHtmlStringRGB(LowMedArousal.color);
+        mediumHighArousalColor = ColorUtility.ToHtmlStringRGB(MedHighArousal.color);
+        highArousalColor = ColorUtility.ToHtmlStringRGB(HighArousal.color);
+
     }
 
     public void OnQuizNotCompleted(){
@@ -47,10 +51,6 @@ public class FinalStartScreenChecks : MonoBehaviour
         lowMediumArousalColor = "F6C6BD"; 
         mediumHighArousalColor = "FCDA3F"; 
         highArousalColor = "F22400";
-
-        Debug.Log("example preset colours");
-        Debug.Log(lowValenceColor);
-        Debug.Log(lowMediumValenceColor);
 
     }
     public void StartGame(){

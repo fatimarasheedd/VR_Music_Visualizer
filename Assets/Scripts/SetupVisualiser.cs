@@ -27,6 +27,51 @@ public class SetupVisualiser : MonoBehaviour
             Debug.LogError("Selected audio clip is null. Make sure the audio clip exists in the 'Audio' folder.");
         }
 
+        // Get the reference to the Lights game object
+        GameObject lightsGameObject = GameObject.Find("Lights");
+
+        // Get the ValenceSpotLight and ArousalSpotLight child game objects
+        GameObject valenceSpotLight = lightsGameObject.transform.Find("ValenceSpotLight").gameObject;
+        GameObject arousalSpotLight = lightsGameObject.transform.Find("ArousalSpotLight").gameObject;
+
+        // // Set the color of the ValenceSpotLight based on selected valence
+        // if (TrackPrefabController.selectedValence <= 0.25f)
+        // {
+        //     valenceSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.lowValenceColor;
+        // }
+        // else if (TrackPrefabController.selectedValence <= 0.5f)
+        // {
+        //     valenceSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.lowMediumValenceColor;
+        // }
+        // else if (TrackPrefabController.selectedValence <= 0.75f)
+        // {
+        //     valenceSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.mediumHighValenceColor;
+        // }
+        // else if (TrackPrefabController.selectedValence <= 1.5f)
+        // {
+        //     valenceSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.highValenceColor;
+        // }
+
+        // // Set the color of the ArousalSpotLight based on selected arousal
+        // if (TrackPrefabController.selectedArousal <= 0.25f)
+        // {
+        //     arousalSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.lowArousalColor;
+        // }
+        // else if (TrackPrefabController.selectedArousal <= 0.5f)
+        // {
+        //     arousalSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.lowMediumArousalColor;
+        // }
+        // else if (TrackPrefabController.selectedArousal <= 0.75f)
+        // {
+        //     arousalSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.mediumHighArousalColor;
+        // }
+        // else if (TrackPrefabController.selectedArousal <= 1.0f)
+        // {
+        //     arousalSpotLight.GetComponent<Light>().color = FinalStartScreenChecks.highArousalColor;
+        // }
+
+
+
 
     }
 
