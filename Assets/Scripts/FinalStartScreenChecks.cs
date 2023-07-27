@@ -25,15 +25,15 @@ public class FinalStartScreenChecks : MonoBehaviour
     public void OnQuizCompleted()
     {
         // Quiz completed
-        lowValenceColor = ColorUtility.ToHtmlStringRGB(LowValence.color);
-        lowMediumValenceColor = ColorUtility.ToHtmlStringRGB(LowMedValence.color);
-        mediumHighValenceColor = ColorUtility.ToHtmlStringRGB(MedHighValence.color);
-        highValenceColor = ColorUtility.ToHtmlStringRGB(HighValence.color);
+        lowValenceColor = "#" + ColorUtility.ToHtmlStringRGB(LowValence.color);
+        lowMediumValenceColor = "#" + ColorUtility.ToHtmlStringRGB(LowMedValence.color);
+        mediumHighValenceColor = "#" + ColorUtility.ToHtmlStringRGB(MedHighValence.color);
+        highValenceColor = "#" + ColorUtility.ToHtmlStringRGB(HighValence.color);
 
-        lowArousalColor = ColorUtility.ToHtmlStringRGB(LowArousal.color);
-        lowMediumArousalColor = ColorUtility.ToHtmlStringRGB(LowMedArousal.color);
-        mediumHighArousalColor = ColorUtility.ToHtmlStringRGB(MedHighArousal.color);
-        highArousalColor = ColorUtility.ToHtmlStringRGB(HighArousal.color);
+        lowArousalColor = "#" + ColorUtility.ToHtmlStringRGB(LowArousal.color);
+        lowMediumArousalColor = "#" + ColorUtility.ToHtmlStringRGB(LowMedArousal.color);
+        mediumHighArousalColor = "#" + ColorUtility.ToHtmlStringRGB(MedHighArousal.color);
+        highArousalColor = "#" + ColorUtility.ToHtmlStringRGB(HighArousal.color);
 
     }
 
@@ -42,15 +42,15 @@ public class FinalStartScreenChecks : MonoBehaviour
         Debug.Log("Quiz not completed");
 
         // Set the hex colors for different valence and arousal levels
-        lowValenceColor = "0D026E"; 
-        lowMediumValenceColor = "9DCAEB";
-        mediumHighValenceColor = "FFFF00"; 
-        highValenceColor = "FF00FF"; 
+        lowValenceColor = "#0D026E"; 
+        lowMediumValenceColor = "#9DCAEB";
+        mediumHighValenceColor = "#FFFF00"; 
+        highValenceColor = "#FF00FF"; 
 
-        lowArousalColor = "ADD8E6"; 
-        lowMediumArousalColor = "F6C6BD"; 
-        mediumHighArousalColor = "FCDA3F"; 
-        highArousalColor = "F22400";
+        lowArousalColor = "#ADD8E6"; 
+        lowMediumArousalColor = "#F6C6BD"; 
+        mediumHighArousalColor = "#FCDA3F"; 
+        highArousalColor = "#F22400";
 
     }
     public void StartGame(){

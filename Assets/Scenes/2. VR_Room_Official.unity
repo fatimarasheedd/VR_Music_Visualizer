@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18035275, g: 0.2257897, b: 0.30702734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -138,10 +138,8 @@ GameObject:
   m_Component:
   - component: {fileID: 69558370}
   - component: {fileID: 69558373}
-  - component: {fileID: 69558372}
-  - component: {fileID: 69558371}
   m_Layer: 0
-  m_Name: ValenceSpotLight
+  m_Name: ValenceSpotLight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,34 +160,6 @@ Transform:
   m_Father: {fileID: 1359706296}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &69558371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69558369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5da1f5cff7814523bfd1d176f1ba3aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 1
-  _minIntensity: 1
-  _maxIntensity: 10
---- !u!114 &69558372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69558369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df5f0d8032f7a40d39cf0efa301f57f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _valence: 0.5
 --- !u!108 &69558373
 Light:
   m_ObjectHideFlags: 0
@@ -201,7 +171,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7755963, g: 0.18560876, b: 0.9150943, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
   m_Range: 3000
   m_SpotAngle: 30
@@ -1048,8 +1018,6 @@ GameObject:
   m_Component:
   - component: {fileID: 598597840}
   - component: {fileID: 598597843}
-  - component: {fileID: 598597842}
-  - component: {fileID: 598597841}
   m_Layer: 0
   m_Name: ArousalSpotLight
   m_TagString: Untagged
@@ -1072,34 +1040,6 @@ Transform:
   m_Father: {fileID: 1359706296}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &598597841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598597839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5da1f5cff7814523bfd1d176f1ba3aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 1
-  _minIntensity: 1
-  _maxIntensity: 10
---- !u!114 &598597842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598597839}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3c725daca28435ba24a69a9f1a70fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _arousal: 0
 --- !u!108 &598597843
 Light:
   m_ObjectHideFlags: 0
@@ -1308,6 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TrackingType: 0
   m_UpdateType: 0
+  m_IgnoreTrackingState: 0
   m_PositionInput:
     m_UseReference: 0
     m_Action:
@@ -1362,6 +1303,18 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Rotation
         m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_TrackingStateInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PositionAction:
@@ -1724,8 +1677,6 @@ GameObject:
   m_Component:
   - component: {fileID: 703195854}
   - component: {fileID: 703195857}
-  - component: {fileID: 703195856}
-  - component: {fileID: 703195855}
   m_Layer: 0
   m_Name: ValenceSpotLight
   m_TagString: Untagged
@@ -1748,34 +1699,6 @@ Transform:
   m_Father: {fileID: 1359706296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &703195855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703195853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5da1f5cff7814523bfd1d176f1ba3aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 1
-  _minIntensity: 1
-  _maxIntensity: 10
---- !u!114 &703195856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703195853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df5f0d8032f7a40d39cf0efa301f57f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _valence: 0.5
 --- !u!108 &703195857
 Light:
   m_ObjectHideFlags: 0
@@ -1787,7 +1710,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7755963, g: 0.18560876, b: 0.9150943, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
   m_Range: 3000
   m_SpotAngle: 30
@@ -2021,6 +1944,7 @@ MonoBehaviour:
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
+  m_SnapEndpointIfAvailable: 1
 --- !u!120 &710552090
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2331,6 +2255,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -2468,10 +2393,8 @@ GameObject:
   m_Component:
   - component: {fileID: 742880002}
   - component: {fileID: 742880005}
-  - component: {fileID: 742880004}
-  - component: {fileID: 742880003}
   m_Layer: 0
-  m_Name: ArousalSpotLight
+  m_Name: ArousalSpotLight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2492,34 +2415,6 @@ Transform:
   m_Father: {fileID: 1359706296}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &742880003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742880001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5da1f5cff7814523bfd1d176f1ba3aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 1
-  _minIntensity: 1
-  _maxIntensity: 10
---- !u!114 &742880004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742880001}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3c725daca28435ba24a69a9f1a70fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _arousal: 0
 --- !u!108 &742880005
 Light:
   m_ObjectHideFlags: 0
@@ -4449,6 +4344,7 @@ MonoBehaviour:
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
+  m_SnapEndpointIfAvailable: 1
 --- !u!120 &1529790871
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -4759,6 +4655,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
