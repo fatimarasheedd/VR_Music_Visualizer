@@ -402,11 +402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -648,11 +648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -892,11 +892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -1508,11 +1508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -2774,11 +2774,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -3254,11 +3254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -3435,11 +3435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -3600,11 +3600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -3861,11 +3861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name
@@ -5094,11 +5094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _maxScale
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210324, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: _startScale
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4196488589369210327, guid: 99131da5e936fa64c8ce34eda2c9eb39, type: 3}
       propertyPath: m_Name

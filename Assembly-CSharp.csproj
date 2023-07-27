@@ -47,6 +47,7 @@
      <Compile Include="Assets\FlexibleColorPicker\Scripts\FCP_Persistence.cs" />
      <Compile Include="Assets\Scripts\CircleCubeGenerator.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
+     <Compile Include="Assets\Scripts\SetupVisualiser.cs" />
      <Compile Include="Assets\Scripts\FacingCamera.cs" />
      <Compile Include="Assets\Scripts\RoomBoundsCalculator.cs" />
      <Compile Include="Assets\FlexibleColorPicker\Scripts\FCP_SpriteMeshEditor.cs" />
@@ -63,7 +64,6 @@
      <Compile Include="Assets\Scripts\CSVReader.cs" />
      <Compile Include="Assets\Scripts\FinalStartScreenChecks.cs" />
      <Compile Include="Assets\Scripts\AudioPeer.cs" />
-     <Compile Include="Assets\Scripts\SetupVisualiser.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
