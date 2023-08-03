@@ -22,6 +22,8 @@ public class FinalStartScreenChecks : MonoBehaviour
     public Material MedHighArousal;
     public Material HighArousal;
 
+    public GameObject selectArousalValue;
+
     public void OnQuizCompleted()
     {
         // Quiz completed
@@ -29,11 +31,6 @@ public class FinalStartScreenChecks : MonoBehaviour
         lowMediumValenceColor = "#" + ColorUtility.ToHtmlStringRGB(LowMedValence.color);
         mediumHighValenceColor = "#" + ColorUtility.ToHtmlStringRGB(MedHighValence.color);
         highValenceColor = "#" + ColorUtility.ToHtmlStringRGB(HighValence.color);
-        
-        Debug.Log(lowValenceColor);
-        Debug.Log(lowMediumValenceColor);
-        
-        GameObject selectArousalValue = GameObject.Find("Select Arousal Colour");
         
         if (selectArousalValue != null) {
             lowArousalColor = "#" + ColorUtility.ToHtmlStringRGB(LowArousal.color);
@@ -46,16 +43,12 @@ public class FinalStartScreenChecks : MonoBehaviour
 
     public void OnQuizNotCompleted(){
 
-        Debug.Log("Quiz not completed");
-
         // Set the hex colors for different valence and arousal levels
         lowValenceColor = "#0D026E"; 
         lowMediumValenceColor = "#9DCAEB";
         mediumHighValenceColor = "#FFFF00"; 
         highValenceColor = "#FF00FF"; 
         
-        GameObject selectArousalValue = GameObject.Find("Select Arousal Colour");
-
         if (selectArousalValue != null){
             lowArousalColor = "#ADD8E6"; 
             lowMediumArousalColor = "#F6C6BD"; 
@@ -67,7 +60,6 @@ public class FinalStartScreenChecks : MonoBehaviour
     }
     public void StartGame(){
         Debug.Log("Game starting!");
-        GameObject selectArousalValue = GameObject.Find("Select Arousal Colour");
 
         if (selectArousalValue != null){
             UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official");
