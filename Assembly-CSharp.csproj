@@ -41,6 +41,7 @@
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
      <Compile Include="Assets\Scripts\InstantiateCubes.cs" />
+     <Compile Include="Assets\Scripts\ImageColourChanger.cs" />
      <Compile Include="Assets\Scripts\SoundWaveGenerator.cs" />
      <Compile Include="Assets\Scripts\ApplyColour.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
@@ -58,12 +59,12 @@
      <Compile Include="Assets\Scripts\BeatDetectionAnalysis.cs" />
      <Compile Include="Assets\Scripts\TrackPrefabController.cs" />
      <Compile Include="Assets\Scripts\ScaleOnAmplitude.cs" />
-     <Compile Include="Assets\Scripts\MusicUI.cs" />
      <Compile Include="Assets\FlexibleColorPicker\Scripts\FlexibleColorPicker.cs" />
      <Compile Include="Assets\Scripts\AudioProcessor.cs" />
      <Compile Include="Assets\Scripts\CSVReader.cs" />
      <Compile Include="Assets\Scripts\FinalStartScreenChecks.cs" />
      <Compile Include="Assets\Scripts\AudioPeer.cs" />
+     <Compile Include="Assets\Scripts\SetupVariablesExperiment3.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

@@ -29,11 +29,18 @@ public class FinalStartScreenChecks : MonoBehaviour
         lowMediumValenceColor = "#" + ColorUtility.ToHtmlStringRGB(LowMedValence.color);
         mediumHighValenceColor = "#" + ColorUtility.ToHtmlStringRGB(MedHighValence.color);
         highValenceColor = "#" + ColorUtility.ToHtmlStringRGB(HighValence.color);
-
-        lowArousalColor = "#" + ColorUtility.ToHtmlStringRGB(LowArousal.color);
-        lowMediumArousalColor = "#" + ColorUtility.ToHtmlStringRGB(LowMedArousal.color);
-        mediumHighArousalColor = "#" + ColorUtility.ToHtmlStringRGB(MedHighArousal.color);
-        highArousalColor = "#" + ColorUtility.ToHtmlStringRGB(HighArousal.color);
+        
+        Debug.Log(lowValenceColor);
+        Debug.Log(lowMediumValenceColor);
+        
+        GameObject selectArousalValue = GameObject.Find("Select Arousal Colour");
+        
+        if (selectArousalValue != null) {
+            lowArousalColor = "#" + ColorUtility.ToHtmlStringRGB(LowArousal.color);
+            lowMediumArousalColor = "#" + ColorUtility.ToHtmlStringRGB(LowMedArousal.color);
+            mediumHighArousalColor = "#" + ColorUtility.ToHtmlStringRGB(MedHighArousal.color);
+            highArousalColor = "#" + ColorUtility.ToHtmlStringRGB(HighArousal.color);
+        }
 
     }
 
@@ -46,17 +53,28 @@ public class FinalStartScreenChecks : MonoBehaviour
         lowMediumValenceColor = "#9DCAEB";
         mediumHighValenceColor = "#FFFF00"; 
         highValenceColor = "#FF00FF"; 
+        
+        GameObject selectArousalValue = GameObject.Find("Select Arousal Colour");
 
-        lowArousalColor = "#ADD8E6"; 
-        lowMediumArousalColor = "#F6C6BD"; 
-        mediumHighArousalColor = "#FCDA3F"; 
-        highArousalColor = "#F22400";
+        if (selectArousalValue != null){
+            lowArousalColor = "#ADD8E6"; 
+            lowMediumArousalColor = "#F6C6BD"; 
+            mediumHighArousalColor = "#FCDA3F"; 
+            highArousalColor = "#F22400";
+        }
+        
 
     }
     public void StartGame(){
         Debug.Log("Game starting!");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official");
+        GameObject selectArousalValue = GameObject.Find("Select Arousal Colour");
 
+        if (selectArousalValue != null){
+            UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official");
+        }
+        else {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official3");
+        }
     }
     
 }
