@@ -1,5 +1,5 @@
 using UnityEngine;
-
+// this script is added to the audio source component to process data using FFTs
 // require component of audio
 [RequireComponent (typeof (AudioSource))]
 
@@ -18,7 +18,6 @@ public class AudioPeer : MonoBehaviour
     public static float[] _Amplitude, _AmplitudeBuffer;
     float _AmplitudeHighest;
     
-    // Start is called before the first frame update
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -26,7 +25,6 @@ public class AudioPeer : MonoBehaviour
         _AmplitudeBuffer = new float[1]; // Allocate memory for _AmplitudeBuffer array
     }
 
-    // Update is called once per frame
     void Update()
     {
         GetSpectrumAudioSource();
@@ -68,7 +66,9 @@ public class AudioPeer : MonoBehaviour
 
     }
 
-
+    //Fills the _samples array with the audio spectrum data using the 
+    //built in GetSpectrumData method of the AudioSource - this is a method that uses FFTs
+    //This provides information about the intensity of different audio frequencies.
     void GetSpectrumAudioSource()
     {
         _audioSource.GetSpectrumData(_samples, 0, FFTWindow.Blackman);

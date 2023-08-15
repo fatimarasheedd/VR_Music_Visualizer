@@ -37,7 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
-     <Compile Include="Assets\Scripts\ArousalSpotlightColour.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
      <Compile Include="Assets\Scripts\InstantiateCubes.cs" />
