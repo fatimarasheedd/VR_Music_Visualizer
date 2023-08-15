@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00002853867, g: 0.0000008682887, b: 7.879827e-10, a: 1}
+  m_IndirectSpecularColor: {r: 0.000028572511, g: 0.00000088588877, b: 0.0000000010295271, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31251,6 +31251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TrackingType: 0
   m_UpdateType: 0
+  m_IgnoreTrackingState: 0
   m_PositionInput:
     m_UseReference: 0
     m_Action:
@@ -31305,6 +31306,18 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Rotation
         m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_TrackingStateInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PositionAction:
@@ -31972,6 +31985,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -37029,6 +37043,7 @@ MonoBehaviour:
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
+  m_SnapEndpointIfAvailable: 1
 --- !u!120 &735078648
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -37148,6 +37163,7 @@ MonoBehaviour:
     m_Bits: 18
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -37232,9 +37248,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 32
   m_RaycastTriggerInteraction: 1
+  m_RaycastSnapVolumeInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
+  m_AutoDeselect: 0
+  m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
   m_AllowAnchorControl: 0
   m_UseForceGrab: 1
@@ -57694,6 +57713,7 @@ MonoBehaviour:
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
+  m_SnapEndpointIfAvailable: 1
 --- !u!120 &1297337753
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -57813,6 +57833,7 @@ MonoBehaviour:
     m_Bits: 18
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -57897,9 +57918,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+  m_RaycastSnapVolumeInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
+  m_AutoDeselect: 0
+  m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
   m_AllowAnchorControl: 0
   m_UseForceGrab: 1
@@ -73001,6 +73025,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
@@ -73591,6 +73616,17 @@ MonoBehaviour:
   LowMedArousal: {fileID: 2100000, guid: 32a90fc7702c143a28203e9b5c20907b, type: 2}
   MedHighArousal: {fileID: 2100000, guid: 743c41c15a3114735aa77efcd598a33a, type: 2}
   HighArousal: {fileID: 2100000, guid: f0daa5199e3d14b4886862c5e6f3ddd1, type: 2}
+  HighALowV: {fileID: 0}
+  HighAMedV: {fileID: 0}
+  HighAHighV: {fileID: 0}
+  MedALowV: {fileID: 0}
+  MedAMedV: {fileID: 0}
+  MedAHighV: {fileID: 0}
+  LowALowV: {fileID: 0}
+  LowAMedV: {fileID: 0}
+  LowAHighV: {fileID: 0}
+  selectArousalValue: {fileID: 0}
+  colourQuizPanel: {fileID: 0}
 --- !u!1 &1817672093
 GameObject:
   m_ObjectHideFlags: 0
@@ -88577,6 +88613,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1921522476}
     m_Modifications:
+    - target: {fileID: 1080325807390292260, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292260, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292262, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_VerticalFit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_Spacing
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_ChildScaleHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325807390292263, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_ChildForceExpandHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1080325807417511725, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
       propertyPath: m_Name
       value: Library Panel
@@ -88720,6 +88804,14 @@ PrefabInstance:
     - target: {fileID: 1080325807898242538, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
       propertyPath: m_Color.r
       value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325808730691562, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_Size
+      value: 0.247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080325808730691562, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b80351fe0aa045698b111883b10e588, type: 3}
