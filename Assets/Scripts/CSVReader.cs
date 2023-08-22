@@ -12,8 +12,8 @@ public class CSVReader : MonoBehaviour
 {
     public TextAsset textAssetData;
     public GameObject trackPanelPrefab;
-    public static string selectedSong; 
-    public static float selectedValence; 
+    public static string selectedSong;
+    public static float selectedValence;
     public static float selectedArousal;
 
     [System.Serializable]
@@ -45,10 +45,10 @@ public class CSVReader : MonoBehaviour
     // Read CSV file
     void ReadCSV()
     {
-        string[] data = textAssetData.text.Split(new string[] {",", "\n"}, StringSplitOptions.None);
+        string[] data = textAssetData.text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
         int tableSize = data.Length / 4 - 1;
         myTrackList.track = new TrackInfo[tableSize];
-        
+
         // track the spacing
         float verticalSpacing = 100f;
         float currentVerticalPosition = 0f;
@@ -65,14 +65,14 @@ public class CSVReader : MonoBehaviour
 
             if (!string.IsNullOrEmpty(myTrackList.track[i].Track))
             {
-                
+
                 // Load the sprite from the "album_artwork" folder using the Track-Artist name
                 string imagePath = "Assets/album_artwork/" + myTrackList.track[i].Track + "-" + myTrackList.track[i].Artist + ".jpg";
                 Sprite loadedSprite = LoadSpriteFromFile(imagePath);
 
                 GameObject newTrack = Instantiate(trackPanelPrefab, transform.position, transform.rotation) as GameObject;
                 newTrack.transform.SetParent(GameObject.FindGameObjectWithTag("Lib").transform, false);
-                
+
                 TrackPrefabController trackPrefabController = newTrack.GetComponent<TrackPrefabController>();
 
                 // Check if the component exists (it should if you attached the TrackPrefabController script to the prefab)
@@ -113,9 +113,9 @@ public class CSVReader : MonoBehaviour
                     {
                         Debug.LogError("Artist TextMeshProUGUI component not found on the prefab.");
                     }
-                    
+
                 }
-            
+
             }
 
         }
@@ -126,7 +126,7 @@ public class CSVReader : MonoBehaviour
         if (File.Exists(path))
         {
             byte[] bytes = File.ReadAllBytes(path);
-            Texture2D texture = new Texture2D(2, 2); // You can adjust the texture size according to your images
+            Texture2D texture = new Texture2D(2, 2);
             if (texture.LoadImage(bytes))
             {
                 return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));

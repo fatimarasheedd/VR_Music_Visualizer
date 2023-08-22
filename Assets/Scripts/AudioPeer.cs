@@ -1,7 +1,7 @@
 using UnityEngine;
 // this script is added to the audio source component to process data using FFTs
 // require component of audio
-[RequireComponent (typeof (AudioSource))]
+[RequireComponent(typeof(AudioSource))]
 
 public class AudioPeer : MonoBehaviour
 {
@@ -17,7 +17,7 @@ public class AudioPeer : MonoBehaviour
 
     public static float[] _Amplitude, _AmplitudeBuffer;
     float _AmplitudeHighest;
-    
+
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -33,10 +33,10 @@ public class AudioPeer : MonoBehaviour
         CreateAudioBands();
         GetAmplitude();
     }
-    
+
     void CreateAudioBands()
     {
-        for(int i=0; i<8;i++)
+        for (int i = 0; i < 8; i++)
         {
             if (_freqBand[i] > _freqBandHighest[i])
             {
@@ -54,11 +54,13 @@ public class AudioPeer : MonoBehaviour
         float _CurrentAmplitude = 0;
         float _CurrentAmplitudeBuffer = 0;
 
-        for (int i=0; i < 8; i++){
+        for (int i = 0; i < 8; i++)
+        {
             _CurrentAmplitude += _audioBand[i];
             _CurrentAmplitudeBuffer += _audioBandBuffer[i];
         }
-        if (_CurrentAmplitude > _AmplitudeHighest) {
+        if (_CurrentAmplitude > _AmplitudeHighest)
+        {
             _AmplitudeHighest = _CurrentAmplitude;
         }
         _Amplitude[0] = _CurrentAmplitude / _AmplitudeHighest;
@@ -76,12 +78,15 @@ public class AudioPeer : MonoBehaviour
 
     void BandBuffer()
     {
-        for (int g = 0; g < 8; ++g){
-            if (_freqBand [g] > _bandBuffer[g]){
-                _bandBuffer [g] = _freqBand [g];
+        for (int g = 0; g < 8; ++g)
+        {
+            if (_freqBand[g] > _bandBuffer[g])
+            {
+                _bandBuffer[g] = _freqBand[g];
                 _bufferDecrease[g] = 0.1f;
             }
-            if (_freqBand [g] < _bandBuffer[g]){
+            if (_freqBand[g] < _bandBuffer[g])
+            {
                 _bandBuffer[g] -= _bufferDecrease[g];
                 _bufferDecrease[g] *= 1.08f;
             }
@@ -94,27 +99,24 @@ public class AudioPeer : MonoBehaviour
     void MakeFrequencyBands()
     {
         int count = 0;
-        for (int i = 0; i < 8; i++){
-
-            int sampleCount = (int)Mathf.Pow(2,i)*2;
+        for (int i = 0; i < 8; i++)
+        {
+            int sampleCount = (int)Mathf.Pow(2, i) * 2;
             float average = 0;
-
-            if (i==7) {
+            if (i == 7)
+            {
                 sampleCount += 2;
             }
-
             // send samples into frequency bands
-            for (int j = 0; j <sampleCount; j++) {
+            for (int j = 0; j < sampleCount; j++)
+            {
                 average += _samples[count] * (count + 1);
-                    count++;
+                count++;
             }
-
             average /= count;
             _freqBand[i] = average * 10;
         }
     }
-
-
 
 }
 

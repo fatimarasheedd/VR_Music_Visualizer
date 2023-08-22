@@ -8,12 +8,13 @@ public class InstantiateCubes : MonoBehaviour
     public float _maxScale;
     // store in an array
     GameObject[] _sampleCube = new GameObject[512];
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 512; i++ ) {
-            GameObject _instanceSampleCube = (GameObject)Instantiate (_sampleCubePrefab);
+        for (int i = 0; i < 512; i++)
+        {
+            GameObject _instanceSampleCube = (GameObject)Instantiate(_sampleCubePrefab);
             _instanceSampleCube.transform.position = this.transform.position;
             _instanceSampleCube.transform.parent = this.transform;
             _instanceSampleCube.name = "SampleCube" + i;
@@ -22,7 +23,7 @@ public class InstantiateCubes : MonoBehaviour
             this.transform.eulerAngles = new Vector3(0, -0.703125f * i, 0);
             _instanceSampleCube.transform.position = Vector3.forward * 400;
             _sampleCube[i] = _instanceSampleCube;
-            
+
         }
 
     }
@@ -30,10 +31,13 @@ public class InstantiateCubes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i=0; i < 512; i++){
-            if (_sampleCube != null) {
-                _sampleCube[i].transform.localScale = new Vector3(50,(AudioPeer._samples[i] * _maxScale) * 50,50);
+        for (int i = 0; i < 512; i++)
+        {
+            if (_sampleCube != null)
+            {
+                _sampleCube[i].transform.localScale = new Vector3(50, (AudioPeer._samples[i] * _maxScale) * 50, 50);
             }
         }
     }
 }
+

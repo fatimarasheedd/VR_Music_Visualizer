@@ -75,14 +75,13 @@ public class BeatDetectionAnalysis : MonoBehaviour
     {
         // Find all child spheres with the name "AmpSphere"
         ScaleOnAmplitude[] childSpheres = GetComponentsInChildren<ScaleOnAmplitude>();
-
         // Set the velocity of each child sphere
         foreach (ScaleOnAmplitude sphere in childSpheres)
         {
             Rigidbody rb = sphere.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                 // Adjust the vertical velocity based on the BPM
+                // Adjust the vertical velocity based on the BPM
                 Vector3 velocity = new Vector3(rb.velocity.x, bpm, rb.velocity.z);
                 rb.velocity = velocity;
             }

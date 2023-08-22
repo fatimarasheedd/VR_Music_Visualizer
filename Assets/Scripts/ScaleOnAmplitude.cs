@@ -11,17 +11,14 @@ public class ScaleOnAmplitude : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _material = GetComponent<MeshRenderer> ().materials [0];
+        _material = GetComponent<MeshRenderer>().materials[0];
 
     }
-
     // Update is called once per frame
     void Update()
     {
-
-        transform.localScale = new Vector3((AudioPeer._Amplitude[0] * _maxScale) + _startScale,(AudioPeer._Amplitude[0] * _maxScale) + _startScale,(AudioPeer._Amplitude[0] * _maxScale) + _startScale );
-        Color _color = new Color (_red * AudioPeer._Amplitude[0], _green * AudioPeer._Amplitude[0], _blue * AudioPeer._Amplitude[0] );
-        _material.SetColor ("_EmissionColor", _color);
-
+        transform.localScale = new Vector3((AudioPeer._Amplitude[0] * _maxScale) + _startScale, (AudioPeer._Amplitude[0] * _maxScale) + _startScale, (AudioPeer._Amplitude[0] * _maxScale) + _startScale);
+        Color _color = new Color(_red * AudioPeer._Amplitude[0], _green * AudioPeer._Amplitude[0], _blue * AudioPeer._Amplitude[0]);
+        _material.SetColor("_EmissionColor", _color);
     }
 }
