@@ -6,6 +6,7 @@ using System.Linq;
 public class SoundWaveGenerator : MonoBehaviour
 {
     AudioPeer _audioPeer;
+    // represents audio spectrum split into 8192 frequency bins
     const int SpectrumSize = 8192;
     readonly float[] _spectrum = new float[SpectrumSize];
     public LineRenderer _topLine;
@@ -24,6 +25,8 @@ public class SoundWaveGenerator : MonoBehaviour
         var crossover = bandSize;
         var viewSpectrum = new List<float>();
         var b = 0f;
+
+        // taking the data from _spectrum and creating a simplified version in viewSpectrum array
         for (var i = 0; i < SpectrumSize; i++)
         {
             var d = _spectrum[i];
@@ -42,7 +45,8 @@ public class SoundWaveGenerator : MonoBehaviour
 
     private void SetLinePoints(List<float> viewSpectrum, LineRenderer lineRenderer, float modifier = 1)
     {
-        var pointDistance = 0.1f;
+        // this value is increased to create the illusion of thickness
+        var pointDistance = 0.5f;
         var width = pointDistance * (viewSpectrum.Count - 1);
 
         lineRenderer.positionCount = viewSpectrum.Count;
