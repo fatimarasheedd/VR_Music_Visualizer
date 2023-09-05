@@ -122,17 +122,7 @@ public class FinalStartScreenChecks : MonoBehaviour
     }
     public void StartGame(){
         Debug.Log("Game starting!");
-        if (colourQuizPanel == null ){
-            if (selectArousalValue != null){
-            UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official");
-            }
-            else {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official3");
-            }
-        }
-        else {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official2");
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene("2. VR_Room_Official");
         
     }
     
