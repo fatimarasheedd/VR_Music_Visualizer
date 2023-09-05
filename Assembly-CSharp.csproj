@@ -42,15 +42,13 @@
      <Compile Include="Assets\Scripts\InstantiateCubes.cs" />
      <Compile Include="Assets\Scripts\ImageColourChanger.cs" />
      <Compile Include="Assets\Scripts\SoundWaveGenerator.cs" />
-     <Compile Include="Assets\Scripts\SetupVariableExperiment2.cs" />
+     <Compile Include="Assets\Scripts\SetupVariableExperiment.cs" />
      <Compile Include="Assets\Scripts\ApplyColour.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
      <Compile Include="Assets\FlexibleColorPicker\Scripts\FCP_Persistence.cs" />
      <Compile Include="Assets\Scripts\CircleCubeGenerator.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
-     <Compile Include="Assets\Scripts\SetupVisualiser.cs" />
      <Compile Include="Assets\Scripts\FacingCamera.cs" />
-     <Compile Include="Assets\Scripts\SetupVariablesExperiment3.cs" />
      <Compile Include="Assets\Scripts\RoomBoundsCalculator.cs" />
      <Compile Include="Assets\FlexibleColorPicker\Scripts\FCP_SpriteMeshEditor.cs" />
      <Compile Include="Assets\Scripts\ParamCube.cs" />
@@ -60,6 +58,7 @@
      <Compile Include="Assets\Scripts\BeatDetectionAnalysis.cs" />
      <Compile Include="Assets\Scripts\TrackPrefabController.cs" />
      <Compile Include="Assets\Scripts\ScaleOnAmplitude.cs" />
+     <Compile Include="Assets\FlexibleColorPicker\ExampleScene\FCP_ExampleScript.cs" />
      <Compile Include="Assets\Scripts\ObjectClickHandler.cs" />
      <Compile Include="Assets\FlexibleColorPicker\Scripts\FlexibleColorPicker.cs" />
      <Compile Include="Assets\Scripts\AudioProcessor.cs" />
